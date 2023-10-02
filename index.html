@@ -215,31 +215,11 @@
             <!-- team member item -->
             <div class="col-xs-12 col-md-6 col-lg-6 imagen">
               <img src="images/contenido/ofrecemos/2.png" class="img-responsive"  alt="author" />
-              <!-- <div class="team-item-orizon">
-                <div class="team-image imagen">
-                  <img src="images/contenido/ofrecemos/3.3.png" alt="author" />
-                </div>
-                &nbsp;&nbsp;&nbsp;
-                <div class="team-text">
-                  <h3 class="team-item-orizon-col">Tecnología Segura
-                    y Confiables</h3>
-                </div>
-              </div> -->
             </div>
             <!-- end team member item -->
             <!-- team member item -->
             <div class="col-xs-12 col-md-6 col-lg-6 imagen">
               <img src="images/contenido/ofrecemos/1.png" class="img-responsive"  alt="author" />
-              <!-- <div class="team-item-orizon">
-                <div class="team-image imagen">
-                  <img src="images/contenido/ofrecemos/4.4.png" alt="author" />
-                </div>
-                &nbsp;&nbsp;&nbsp;
-                <div class="team-text">
-                  <h3 class="team-item-orizon-col2">Integración en todas 
-                    tus Plataformas</h3>
-                </div>
-              </div> -->
             </div>
             <!-- end team member item -->
             </div>
@@ -303,62 +283,5 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="axios.js"></script>
-
-    <script>
-      function obteneInfo() {
-        let emails = document.getElementById("email").value;
-        let nombre = document.getElementById("nombre").value;
-        let apellido = document.getElementById("apellido").value;
-        let mensaje = document.getElementById("message").value;
-
-        let validEmail = /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
-
-        // Using test we can check if the text match the pattern
-
-        if (emails && nombre && apellido && mensaje) {
-          if (validEmail.test(emails)) {
-            this.enviarCorreo(emails, nombre, apellido, mensaje).then(
-              (succ) => {
-                if (succ.status === 200) {
-                  Swal.fire({
-                    position: "top-end",
-                    icon: "success",
-                    title: succ.data.mensaje,
-                    showConfirmButton: false,
-                    timer: 1500,
-                  });
-                  this.limpiar();
-                } else {
-                  Swal.fire({
-                    icon: "error",
-                    title: "Oops...",
-                    text: "Ocurrio un error inesperado.",
-                  });
-                }
-              }
-            );
-          } else {
-            Swal.fire({
-              icon: "warning",
-              title: "Oops...",
-              text: "El correo electrónico no cumple el formato.",
-            });
-          }
-        } else {
-          Swal.fire({
-            icon: "error",
-            title: "Oops...",
-            text: "Los campos son Obligatorios.",
-          });
-        }
-      }
-
-      function limpiar() {
-        document.getElementById("email").value = "";
-        document.getElementById("nombre").value = "";
-        document.getElementById("apellido").value = "";
-        document.getElementById("message").value = "";
-      }
-    </script>
   </body>
 </html>

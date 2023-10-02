@@ -1,0 +1,9 @@
+version: "0.1"
+services:
+  web:
+    build: .
+    command: bash -c "rm -f tmp/pids/server.pid 3007 -b '0.0.0.0'"
+    volumes:
+      - .:/ciclikoweb
+    ports:
+      - "3007:3007"
